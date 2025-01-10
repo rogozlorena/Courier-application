@@ -63,11 +63,16 @@ public class CourierService {
         return false;
     }
 
+
     public List<Courier> getAllCouriersWithoutPendingPackages() {
         List<Courier> allCouriers = (List<Courier>) courierRepository.findAll();
         return allCouriers.stream()
-                .filter(courier -> packageRepository.findByCourierId(courier.getId()).stream()
-                        .noneMatch(pkg -> "Pending".equals(pkg.getStatus())))
+                .filter(courier -> {
+                    // Obține pachetele curierului
+                    List<Package> packages = packageRepository.findByCourierId(courier.getId());
+                    // Verifică dacă nu există niciun pachet cu statusul "PENDING"
+                    return packages.stream().noneMatch(pkg -> pkg.getStatus() == PackageStatus.PENDING);
+                })
                 .collect(Collectors.toList());
     }
 

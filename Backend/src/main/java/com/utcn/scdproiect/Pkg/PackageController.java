@@ -10,7 +10,9 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 @Controller
 @AllArgsConstructor
-
+//Am adaugat urmatoarele doua linii
+@RequestMapping("/package")
+@CrossOrigin
 public class PackageController {
     @Autowired
     private final PackageService packageService;
