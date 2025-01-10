@@ -44,6 +44,7 @@ public class CourierController {
     }
     @GetMapping("/get-courier")
     public ResponseEntity<List<Courier>> getAllCouriers() {
+        System.out.println("in get courier!!!");
         List<Courier> couriers = courierService.getAllCouriers();
         return ResponseEntity.ok(couriers);
     }
