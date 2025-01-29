@@ -3,7 +3,7 @@ Distributed application for tracking package deliveries
 ![alt text](image.png)
 
 ## Overview
-This project is a distributed application designed to efficiently track package deliveries. It provides a robust and scalable system for managing packages and couriers, with a well-structured backend built on Spring Boot and a dynamic frontend developed using React. Additionally, a desktop client, developed in C# using Visual Studio, is designed for customers to track their orders.
+This project is a distributed application designed to efficiently track package deliveries. It provides a robust and scalable system for managing packages and couriers, with a well-structured backend built on Spring Boot and a dynamic frontend developed using React. Additionally, a desktop client, developed in C#, is designed for customers to track their orders.
 
 ## System Architecture
 - **Frontend (Administrator Interface):** React-based user interface for managing and tracking package deliveries.
